@@ -1,0 +1,3 @@
+FROM jenkins/jenkins
+
+cmd catalina.sh start

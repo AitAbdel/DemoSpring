@@ -1,0 +1,6 @@
+docker run -d -p 8080:8080 --name tomcat tomcatserver
+
+docker run -d -p 8081:8081 -p 8082:8082 --name artifactory -v artifactory:/var/opt/jfrog/artifactory releases-docker.jfrog.io/jfrog/artifactory-oss:latest
+
+docker run -d --name jenkins -v jenkins-docker-certs:/certs/client -v jenkins-data:/var/jenkins_home -p 8085:8080 -p 50000:50000 jenkins/jenkins
+
